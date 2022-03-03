@@ -1,0 +1,26 @@
+N 11 1  // sum, consist both v10 and v11
+N 1 1   // n, from 1 to n
+N 2 12  // count, actually 12! is above 99999999
+N 3 1   // constant 1
+
+// loop
+-
+L 2
+L 3
+S 2
+?F 12 // exit
+
+*       //sum *= n
+L' 10
+L 11
+L 1
+S' 10
+S 11
+P 0
+
++       //++n
+L 1
+L 3
+S 1
+
+B 17    //loop end
