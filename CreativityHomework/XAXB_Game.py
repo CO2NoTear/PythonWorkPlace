@@ -1,18 +1,23 @@
 import random
 
 def getinput() -> list:
+    print("You guess it is...\n")
     rawlist = list(input())     # in rawlist, items are char like '1' '3'...
     intlist = []
     for item in rawlist:
         if not item.isnumeric():
             print('Error input! Input a num xxxx, plz!\n')
             return getinput()
-        intlist.append(int(item))   #convert char into int
+        elif int(item) in intlist:
+            print("You typed a repeated number! Don't do that!")
+            return getinput()
+        else:
+            intlist.append(int(item))   #convert char into int
     return intlist
 
 print('''
-    The number you have to guess is xxxx, 
-    everytime you guess a number, the process will return a sequence
+    The number you have to guess is xxxx, without same number.
+    everytime you guess a number, the process will return a sequence:
     xAyB, which represents in your answer, 'x' num(s) is(are) right both its val and position,
     while 'y' num(s) is(are) at a wrong position with a right val.
     JUST TRY GUESS THE FINAL ANSWER!
