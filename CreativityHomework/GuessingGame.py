@@ -1,4 +1,3 @@
-import imp
 from random import randint
 
 n = int(randint(1,100))  # destination
