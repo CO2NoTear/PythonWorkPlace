@@ -36,6 +36,7 @@ class TuringMachine:
             instrcutions[index] = rawinput.split(',')[1:3]
             # print(instrcutions[index])
             index += 1
+        f.close()
         return instrcutions
 
     def step(self):
@@ -53,7 +54,7 @@ class TuringMachine:
         self.leftmost  = min(self.head,self.leftmost)  # Update leftmost
         self.rightmost = max(self.head,self.rightmost) # Update rightmost
         self.state= int(inst[2])                   # Update state
-        print(self.getCurrentStateString())
+        # print(self.getCurrentStateString())
 
     def run(self, input):
         '''
