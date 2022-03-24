@@ -21,6 +21,9 @@ print('''
     xAyB, which represents in your answer, 'x' num(s) is(are) right both its val and position,
     while 'y' num(s) is(are) at a wrong position with a right val.
     JUST TRY GUESS THE FINAL ANSWER!
+    猜数游戏：输入一个不含重复数字的四位数，程序会给出形如xAyB的返回值，
+    其中x代表值、位置都正确的数字个数，y代表值正确，但位置有误的个数。
+    尽你所能猜出正确答案吧！
 ''')
 num = random.sample(range(0,9),k=4)
 while True:
