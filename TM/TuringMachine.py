@@ -1,5 +1,3 @@
-from re import I
-from shutil import move
 import numpy as np
 tapeLength = 1000
 maxIter = 9999
