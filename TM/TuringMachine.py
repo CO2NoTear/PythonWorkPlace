@@ -22,18 +22,18 @@ class TuringMachine:
         :param programFile: 一个N行程序，具体格式参照Great Ideas in Computer Science P164 M_add
         :return: 自行设计合适的数据结构，存储每一条instruction，方便调用；example：Nx2数组，每个数组包含(i,R,j)或者(i,L,j)
         '''
-        index = 0
+        # index = 0
         self.program_name = programFile
         f = open(self.program_name, 'r')
-        instrcutions = [[]]
+        instrcutions = []
         while True:
-            instrcutions.append([])
+            # instrcutions.append([])
             rawinput = f.readline()
             if not rawinput:
                 break
-            instrcutions[index] = rawinput.split(',')[1:3]
+            instrcutions.append(rawinput.split(',')[1:3])
             # print(instrcutions[index])
-            index += 1
+            # index += 1
         f.close()
         return instrcutions
 
