@@ -1,0 +1,6 @@
+A                              Current cost: 0
+A-H                            Current cost: 4
+A-H-G                          Current cost: 6
+A-H-G-F                        Current cost: 10
+A-H-G-F-D                      Current cost: 13
+A-H-G-F-D-E                    Current cost: 15
