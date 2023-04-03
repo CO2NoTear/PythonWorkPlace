@@ -36,10 +36,9 @@ class BaseTable:
         self.start_dot = dot
     
     def in_boundary(self, dot):
-        try:
-            self.table[dot]
+        if 0 <= dot[0] < self.table.shape[0] and 0 <= dot[1] < self.table.shape[1]:
             return True
-        except IndexError:
+        else:
             return False
     
     def iterate(self, step):
@@ -78,25 +77,46 @@ class BaseTable:
         return np.array(new_qvalue)
     
     def print_table(self):
-        print("table:")
-        print(self.table.shape)
-        print(self.table)
-        print("qtable:")
-        print(self.qtable.shape)
-        print(self.qtable)
-        print("vtable:")
-        print(self.vtable.shape)
-        print(self.vtable)
-
+        with np.printoptions(precision=2, suppress=True):
+            # print("table:")
+            # print(self.table.shape)
+            # print(self.table)
+            print("qtable:")
+            fulltable = np.full((self.table.shape[0]*3, self.table.shape[1]*3), np.nan)
+            for i in range(self.table.shape[0]*self.table.shape[1]):
+                dot_center = (i//self.table.shape[1], i%self.table.shape[1])
+                dot_center_np = np.array((dot_center[0]*3+1, dot_center[1]*3+1))
+                fulltable[tuple(dot_center_np)] = 0
+                for dire in range(4):
+                    fulltable[tuple(dot_center_np + self.directions[dire])] = self.qtable[dot_center][dire]
+            print(fulltable)
+            print("vtable:")
+            print(self.vtable.shape)
+            print(self.vtable)
 
 # %%
-MDP = BaseTable((3,4), 0.5, 0)
+gamma = 1
+alive = 0
+MDP = BaseTable((3,4), gamma, alive)
 MDP.set_table_val((0,3), 'diamond')
 MDP.set_table_val((1,3), 'fire')
 MDP.set_table_val((1,1), 'wall')
 MDP.set_start_dot((2,0))
 
-MDP.iterate(2)
+MDP.iterate(1)
+print('the {}th iteration'.format(1))
+MDP.print_table()
+MDP.iterate(1)
+print('the {}th iteration'.format(2))
+MDP.print_table()
+MDP.iterate(1)
+print('the {}th iteration'.format(3))
+MDP.print_table()
+MDP.iterate(1)
+print('the {}th iteration'.format(4))
+MDP.print_table()
+MDP.iterate(1)
+print('the {}th iteration'.format(5))
 MDP.print_table()
 
 
