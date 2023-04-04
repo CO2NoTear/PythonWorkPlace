@@ -1,0 +1,16 @@
+{
+    "jupyter.kernels.filter": [
+        {
+            "path": "d:\\Anaconda\\envs\\flasky\\python.exe",
+            "type": "pythonEnvironment"
+        },
+        {
+            "path": "d:\\Orange3\\python.exe",
+            "type": "pythonEnvironment"
+        },
+        {
+            "path": "c:\\Users\\DELL\\AppData\\Local\\Programs\\Python\\Python39\\python.exe",
+            "type": "pythonEnvironment"
+        }
+    ]
+}
