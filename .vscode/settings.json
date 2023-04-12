@@ -12,5 +12,6 @@
             "path": "c:\\Users\\DELL\\AppData\\Local\\Programs\\Python\\Python39\\python.exe",
             "type": "pythonEnvironment"
         }
-    ]
+    ],
+    "python.formatting.provider": "black"
 }
