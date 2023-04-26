@@ -1,0 +1,22 @@
+
+left child: 
+x3 == 1
+reached leaf
+right child: 
+x3 != 1
+left child: 
+x2, == 1
+reached leaf
+right child: 
+x2, != 1
+left child: 
+x1 == 0
+left child: 
+x4 == 2
+reached leaf
+right child: 
+x4 != 2
+reached leaf
+right child: 
+x1 != 0
+reached leaf
