@@ -163,3 +163,5 @@ cython_debug/
 
 PageRank/*.txt
 *.pdf
+*.docx
+*.pptx
