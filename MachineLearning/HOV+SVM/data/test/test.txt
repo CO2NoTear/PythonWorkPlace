@@ -1,0 +1,14 @@
+cat.0 0
+cat.1 0
+cat.2 0
+cat.3 0
+cat.4 0
+cat.5 0
+cat.6 0
+dog.0 1
+dog.1 1
+dog.2 1
+dog.3 1
+dog.4 1
+dog.5 1
+dog.6 1
