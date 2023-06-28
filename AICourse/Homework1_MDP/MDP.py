@@ -67,7 +67,7 @@ class BaseTable:
             for action_dire in range(3):
                 next_dot = tuple(np.array(dot) + self.directions[(qdire+action_dire-1)%4])
                 # hit a wall
-                if not self.in_boundary(next_dot) or np.isnan(self.table[next_dot]):
+                if self.table[dot] != 0 or not self.in_boundary(next_dot) or np.isnan(self.table[next_dot]):
                     next_dot = dot
                 sum += self.action_dire_ratio[action_dire] * (
                     self.vtable[next_dot] * self.gamma +\

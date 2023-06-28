@@ -8,9 +8,9 @@
             "name": "Python: 当前文件",
             "type": "python",
             "request": "launch",
-            "cwd": "${fileDirname}",
-            "program": "${fileDirname}\\${fileBasename}",
-            "console": "integratedTerminal"
+            "program": "${file}",
+            "console": "integratedTerminal",
+            "justMyCode": true
         }
     ]
 }

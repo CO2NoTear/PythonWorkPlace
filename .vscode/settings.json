@@ -1,17 +1,9 @@
 {
-    "jupyter.kernels.filter": [
-        {
-            "path": "d:\\Anaconda\\envs\\flasky\\python.exe",
-            "type": "pythonEnvironment"
-        },
-        {
-            "path": "d:\\Orange3\\python.exe",
-            "type": "pythonEnvironment"
-        },
-        {
-            "path": "c:\\Users\\DELL\\AppData\\Local\\Programs\\Python\\Python39\\python.exe",
-            "type": "pythonEnvironment"
-        }
-    ],
-    "python.formatting.provider": "black"
+    "python.formatting.provider": "black",
+    "python.analysis.typeCheckingMode": "off",
+    "jupyter.kernels.excludePythonEnvironments": [
+        "d:\\Anaconda\\envs\\flasky\\python.exe",
+        "d:\\Orange3\\python.exe",
+        "c:\\Users\\DELL\\AppData\\Local\\Programs\\Python\\Python39\\python.exe"
+    ]
 }
